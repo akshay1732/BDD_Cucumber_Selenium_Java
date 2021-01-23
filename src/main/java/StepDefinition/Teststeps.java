@@ -1,7 +1,8 @@
 package StepDefinition;
 
-import com.qa.pageobjects.*;
-import com.qa.utilities.Testbase;
+
+import PageObjects.Searchpage;
+import Utilities.Testbase;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class Teststeps extends Testbase {
+public class Teststeps {
 
     Searchpage page;
     Testbase base = new Testbase();
@@ -24,7 +25,7 @@ public class Teststeps extends Testbase {
     }
 
     @After
-    public void afterscenario() throws IOException {
+    public void afterscenario(){
         base.destroy();
     }
 

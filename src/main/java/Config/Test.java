@@ -1,8 +1,10 @@
-package com.qa.config;
+package Config;
+
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
 
 public class Test {

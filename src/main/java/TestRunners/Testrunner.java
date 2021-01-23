@@ -1,4 +1,4 @@
-package com.qa.testrunner;
+package TestRunners;
 
 
 import io.cucumber.junit.Cucumber;

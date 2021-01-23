@@ -1,7 +1,6 @@
-package com.qa.utilities;
+package Utilities;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -9,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +25,7 @@ public class Testbase {
     public void setup() throws IOException {
 
 
-        FileInputStream fin = new FileInputStream("C:\\Users\\Akshay\\IdeaProjects\\BDDCucumberProject\\src\\main\\java\\com\\qa\\config\\config.properties");
+        FileInputStream fin = new FileInputStream("D:\\EclipseWorkspace\\BDDCucumberProject\\src\\main\\java\\Config\\config.properties");
         prop = new Properties();
         prop.load(fin);
         driver.manage().timeouts().implicitlyWait(implicitwaittime, TimeUnit.SECONDS);
@@ -38,7 +36,7 @@ public class Testbase {
     }
 
     public WebDriver getdriverinstance(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Akshay\\IdeaProjects\\BDDCucumberProject\\src\\main\\java\\com\\qa\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","D:\\EclipseWorkspace\\BDDCucumberProject\\src\\main\\java\\Drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         return driver;
     }
@@ -75,10 +73,6 @@ public class Testbase {
 
         return table;
         }
-
-
-
-
 
 
     public void destroy(){
