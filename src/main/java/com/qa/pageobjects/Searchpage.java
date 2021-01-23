@@ -44,6 +44,29 @@ public class Searchpage {
         return title;
     }
 
+    // XPath- Using Single Attribute
+    //<HTML tag>[@attribute_name='attribute_value']
+
+    //Using Multiple Attribute
+    //<HTML tag>[@attribute_name1='attribute_value1'][@attribute_name2='attribute_value2]
+
+    //XPath- Using And
+    //<HTML tag>[@attribute_name1='attribute_value1' and @attribute_name2='attribute_value2]
+
+    //XPath- Using Or
+    //<HTML tag>[@attribute_name1='attribute_value1' or @attribute_name2='attribute_value2]
+
+    //XPath- contains()
+    // <HTML tag>[contains(@attribute_name,'attribute_value')]
+
+    //XPath- starts-with()
+    //<HTML tag>[starts-with(@attribute_name,'attribute_value')]
+
+    //XPath- text()
+    //<HTML tag>[text()='Google offered in']
+
+    //XPath- last()
+    //<HTML tag>[@type='text'])[last()]
 
 
 

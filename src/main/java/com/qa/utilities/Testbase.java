@@ -64,7 +64,7 @@ public class Testbase {
 
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
-                HashMap data= new HashMap();
+                HashMap<String,String> data= new HashMap<String,String>();
                 for(int i=0;i<row.getLastCellNum();i++) {
 
                     data.put(Headers.get(i),row.getCell(i).getStringCellValue());
