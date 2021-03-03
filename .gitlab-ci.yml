@@ -1,4 +1,4 @@
 build-job:
   stage: test
   script:
-    mvn test
+    - mvn test
