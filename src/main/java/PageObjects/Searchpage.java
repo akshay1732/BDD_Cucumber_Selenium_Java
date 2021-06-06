@@ -68,6 +68,35 @@ public class Searchpage {
     //XPath- last()
     //<HTML tag>[@type='text'])[last()]
 
+    //CSS- Tag and ID
+    //Tag#Value of id attribute
+
+    //CSS-Tag and Class
+    //Tag.Value of Class attribute
+
+    //Tag and Attribute
+    //Tag[Attribute=value]
+
+    //Tag, ID/Class and Attribute
+    //tag.class[attribute=value]
+    //tag.#ID[attribute=value]
+
+    //CSS- Sub-String Matches
+    //1. Starts with (^):   //Tag[attribute^=prefix of the string]
+    //2. Ends with ($): //Tag[attribute$=suffix of the string]
+    //3. Contains (*):< //Tag[attribute*=sub-string]
+    // button:contains("Log In")
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -14,17 +14,17 @@ import java.util.concurrent.TimeUnit;
 
 public class Testbase {
 
-
+    //test
 
     public WebDriver driver;
-    public static int implicitwaittime=30;
+    public static int implicitwaittime=40;
     public static int pageloadtime=30;
     public static Properties prop;
 
 
     public void setup() throws IOException {
 
-
+        //testing pipeline
         FileInputStream fin = new FileInputStream("D:\\EclipseWorkspace\\BDDCucumberProject\\src\\main\\java\\Config\\config.properties");
         prop = new Properties();
         prop.load(fin);

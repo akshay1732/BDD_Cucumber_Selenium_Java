@@ -1,4 +1,4 @@
-package Config;
+package Rough;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,6 +17,7 @@ public class Test {
             map.put("3","Banana");
             map.put("1","Grapes"); //trying duplicate key
 
+
             Properties prop = new Properties();
             FileInputStream fin = new FileInputStream("C:\\Users\\Akshay\\IdeaProjects\\BDDCucumberProject\\src\\main\\java\\com\\qa\\config\\config.properties");
             prop.load(fin);
@@ -28,5 +29,8 @@ public class Test {
                 System.out.println(m.getKey()+" "+m.getValue());
             }
         }
+
+
+
 
 }

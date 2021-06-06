@@ -8,13 +8,14 @@ Feature: Test Google Search Page
     And Click on google search button
 
 
+
     Examples:
       | value    |
       | Amazon   |
       | Flipkart |
 
 
-  Scenario Outline: Test I am feeling lucky button on google search page
+  Scenario Outline: Test I ```````1```````` feeling lucky button on google search page
 
   Given User is on Google search page
   Then Enter "<value>" to search in search box
