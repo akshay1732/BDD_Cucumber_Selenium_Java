@@ -1,6 +1,5 @@
 default:
-  image1: ubuntu:latest
-  image2: maven:3.5-jdk-8-alpine
+  image: maven:3.5-jdk-8-alpine
 
 
 test:
