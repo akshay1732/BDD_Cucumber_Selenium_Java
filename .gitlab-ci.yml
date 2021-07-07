@@ -6,4 +6,5 @@ stages:
 
 test:
   stage:test
-  script: mvn test
+  script
+     - mvn test
