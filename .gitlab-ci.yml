@@ -1,6 +1,7 @@
 default:
   image: ubuntu:latest
 
-  test:
+
+test:
   script:
     - mvn test
