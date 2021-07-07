@@ -1,10 +1,6 @@
-image: maven:3.3.9-jdk-8
+default:
+  image: ubuntu:latest
 
-stages:
-  - test
-
-
-test:
-  stage:test
-  script
-     - mvn test
+  test:
+  script:
+    - mvn test
