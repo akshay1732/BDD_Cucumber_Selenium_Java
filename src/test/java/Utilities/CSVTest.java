@@ -17,125 +17,106 @@ import java.util.*;
 public class CSVTest {
 
 
-
     public static List<Map<String, String>> read(String Path) throws IOException {
 
-        List<Map<String,String>> result = new ArrayList<Map<String,String>>();
+        List<Map<String, String>> result = new ArrayList<Map<String, String>>();
         Reader in = new FileReader(Path);
         CSVParser parser = new CSVParser(in, CSVFormat.EXCEL.withHeader());
         List<String> headers = parser.getHeaderNames();
 
-        for(CSVRecord row:parser){
-        Map rowmap = new HashMap<String,String>();
-             for(int i=0;i<headers.size();i++){
-                 rowmap.put(headers.get(i),row.get(i));
-             }
-             result.add(rowmap);
+        for (CSVRecord row : parser) {
+            Map rowmap = new HashMap<String, String>();
+            for (int i = 0; i < headers.size(); i++) {
+                rowmap.put(headers.get(i).trim(), row.get(i).trim());
+            }
+            result.add(rowmap);
         }
-        System.out.println(result.get(0)+", "+result.get(1)+", "+result.get(2));
+        //System.out.println(result.get(0));
         return result;
+
+
     }
 
     public static List<Map<String, String>> readusingguava(String Path) throws IOException {
 
-        List<Map<String,String>> result = new ArrayList<Map<String,String>>();
+        List<Map<String, String>> result = new ArrayList<Map<String, String>>();
         Reader in = new FileReader(Path);
         CSVParser parser = new CSVParser(in, CSVFormat.EXCEL.withHeader());
         List<String> headers = parser.getHeaderNames();
 
-        for(CSVRecord row:parser){
-            Map rowmap = new HashMap<String,String>();
-            for(int i=0;i<headers.size();i++){
-                rowmap.put(headers.get(i),row.get(i));
+        for (CSVRecord row : parser) {
+            Map rowmap = new HashMap<String, String>();
+            for (int i = 0; i < headers.size(); i++) {
+                rowmap.put(headers.get(i), row.get(i));
             }
             result.add(rowmap);
         }
-        System.out.println(result.get(0)+", "+result.get(1)+", "+result.get(2));
+        System.out.println(result.get(0) + ", " + result.get(1) + ", " + result.get(2));
         return result;
     }
 
 
-    public static void writetocsv(String filepath, List<Map<String,String>> actual_result) throws IOException {
+    public static void writetocsv(String filepath, List<Map<String, String>> actual_result) throws IOException {
 
         FileWriter writer = new FileWriter(filepath);
         CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.EXCEL
                 .withHeader(actual_result.get(0).keySet().toArray(new String[actual_result.get(0).size()])));
 
 
-         for(Map m:actual_result) {
-             csvPrinter.printRecord(m.values());
-         }
+        for (Map m : actual_result) {
+            csvPrinter.printRecord(m.values());
+        }
         csvPrinter.flush();
 
     }
 
 
-
     public static void main(String[] args) throws IOException {
 
+
         /*
-        read("/Users/akshay.kurale/Automation/Demo/BDD_Cucumber_Selenium_Java/src/main/resources/TestData.csv");
 
-        Map<String, String> asia1 = new HashMap<String, String>();
-        asia1.put("Japan", "Tokyo");
-        asia1.put("South Korea", "Seoul");
-        asia1.put("India", "New Delhi");
-        Map<String, String> asia2 = new HashMap<String, String>();
-        asia2.put("Japan", "Tokyo");
-        asia2.put("China", "Beijing");
-        asia2.put("India", "Delhi");
-        MapDifference<String, String> diff = Maps.difference(asia1, asia2);
-        Map<String, MapDifference.ValueDifference<String>> entriesDiffering = diff.entriesDiffering();
-        //System.out.println(entriesDiffering);
+        read("/Users/akshay.kurale/Automation/Demo/BDD_Cucumber_Selenium_Java/src/test/resources/Sheet.csv");
 
-        Map m1 = new HashMap();
-        m1.put("ID", "01");
-        m1.put("Name", "Akshay");
-        m1.put("Designation", "Pro");
-        m1.put("Company", "Globant");
-        List<Map<String, String>> actual_result = new ArrayList<Map<String, String>>();
-        actual_result.add(m1);
+        List<Map<String,String>> l1 = read("/Users/akshay.kurale/Automation/Demo/BDD_Cucumber_Selenium_Java/src/test/resources/Sheet.csv");
+        List<Map<String,String>> l2 = read("/Users/akshay.kurale/Automation/Demo/BDD_Cucumber_Selenium_Java/src/test/resources/TestData.csv");
 
-        writetocsv("/Users/akshay.kurale/Automation/Demo/BDD_Cucumber_Selenium_Java/src/main/resources/Create.csv", actual_result);
+        List<Map<String, MapDifference.ValueDifference<String>>> r = new ArrayList<>();
 
-        String expectedvalue = "null";
-        String actualvalue = null;
+        for(int i=0;i<l1.size();i++){
 
-        System.out.println("Method One");
+            if(l1.get(i).keySet().equals(l2.get(i).keySet())) {
+                MapDifference<String, String> diff = Maps.difference(l1.get(i), l2.get(i));
+                System.out.println(diff);
+                Map<String, MapDifference.ValueDifference<String>> entriesDiffering = diff.entriesDiffering();
 
-        if (expectedvalue != null && actualvalue != null) {
-            if (!(actualvalue.equals(expectedvalue))) {
-                System.out.println("1. Expected: " + expectedvalue + " Actual :" + actualvalue);
-            }
+                if (entriesDiffering.size() > 0) {
+                    r.add(entriesDiffering);
+                }
 
-        } else if (expectedvalue == null && actualvalue != null) {
+                System.out.println("Differences: "+entriesDiffering);
+            }else{
 
-            if (!(actualvalue.equals(expectedvalue))) {
-                System.out.println("2. Expected: " + expectedvalue + " Actual :" + actualvalue);
-            }
-        } else if (expectedvalue != null && actualvalue == null) {
-
-            if (!(expectedvalue.equals(actualvalue))) {
-                System.out.println("3. Expected: " + expectedvalue + " Actual :" + actualvalue);
+                System.out.println("headers not same");
             }
         }
 
-        System.out.println("\n\nMethod Two");
-        if (expectedvalue != null && actualvalue != null) {
-            if (!(actualvalue.equals(expectedvalue))) {
+        */
 
-                System.out.println("1. Expected: " + expectedvalue + " Actual :" + actualvalue);
-            }
-        } else if (!(actualvalue == expectedvalue)) {
-
-            System.out.println("2. Expected: " + expectedvalue + " Actual :" + actualvalue);
+        FileReader reader = new FileReader("src/test/resources/Features/file.sql");
+        StringBuilder text = new StringBuilder();
+        int i;
+        while ((i = reader.read()) != -1) {
+            text = text.append((char) i);
         }
+        ///String query= text.toString().trim();
+        String[] queries = text.toString().trim().split(";");
+        //Arrays.parallelSetAll(queries,j->queries[j].trim());
+        Arrays.stream(queries).map(String::trim).toArray(trimmed -> queries);
 
-         */
-
+        Arrays.stream(queries).forEach(e-> System.out.println(e));
 
 
 
     }
-
 }

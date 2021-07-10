@@ -40,11 +40,11 @@ public class Testbase {
     }
 
     public WebDriver getdriverinstance() {
-        System.setProperty("webdriver.chrome.driver","src/test/java/Drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/test/java/Drivers/chromedriver_Linux");
 
         try {
             ChromeOptions options = new ChromeOptions();
-            options.setHeadless(true);
+            //options.setHeadless(true);
             driver = new ChromeDriver(options);
            // driver = new RemoteWebDriver(new URL(remote_url_chrome), options);
         }catch(Exception e){
