@@ -44,7 +44,7 @@ public class Testbase {
 
         try {
             ChromeOptions options = new ChromeOptions();
-            //options.setHeadless(true);
+            options.setHeadless(true);
             driver = new ChromeDriver(options);
            // driver = new RemoteWebDriver(new URL(remote_url_chrome), options);
         }catch(Exception e){

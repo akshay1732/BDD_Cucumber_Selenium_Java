@@ -7,7 +7,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.junit.Assert;
 
 import java.io.IOException;
 
