@@ -90,7 +90,6 @@ public class Testbase {
 
 
     public void destroy(){
-
         driver.quit();
     }
 }

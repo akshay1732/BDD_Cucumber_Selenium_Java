@@ -4,7 +4,11 @@ WORKDIR /MyProject
 COPY src /MyProject/src
 #coping pom file of your framework
 COPY pom.xml /MyProject
-
+WORKDIR /MyProject
+#resolve dependency
+RUN mvn dependency:resolve
+#run test
+RUN mvn clean test
 
 
 
