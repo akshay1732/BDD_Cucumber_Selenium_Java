@@ -40,7 +40,7 @@ public class Testbase {
     }
 
     public WebDriver getdriverinstance() {
-        System.setProperty("webdriver.chrome.driver","src/test/java/Drivers/chromedriver_Linux");
+        System.setProperty("webdriver.chrome.driver","src/test/java/Drivers/chromedriver_Mac");
 
         try {
             ChromeOptions options = new ChromeOptions();
