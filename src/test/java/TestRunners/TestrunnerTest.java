@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/Features",
         glue={"classpath:StepDefinition"},
         dryRun=false,
-        plugin = {"pretty","html:test-output/HTML-Report/report.html",
+        plugin = {"pretty","junit:test-output/Junit/report.xml","html:test-output/HTML-Report/report.html",
         "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"}
                 //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )

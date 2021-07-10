@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="21.497">
+<testcase classname="Test Google Search Page" name="Test search button on google search page" time="5.267">
+<system-out><![CDATA[Given User is on Google search page.........................................passed
+Then Enter "Amazon" to search in search box.................................passed
+And Click on google search button...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Google Search Page" name="Test search button on google search page 2" time="4.045">
+<system-out><![CDATA[Given User is on Google search page.........................................passed
+Then Enter "Flipkart" to search in search box...............................passed
+And Click on google search button...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Google Search Page" name="Test I feeling lucky button on google search page" time="5.777">
+<system-out><![CDATA[Given User is on Google search page.........................................passed
+Then Enter "Unsplash" to search in search box...............................passed
+And Click on I am feeling lucky button......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Google Search Page" name="Test I feeling lucky button on google search page 2" time="6.137">
+<system-out><![CDATA[Given User is on Google search page.........................................passed
+Then Enter "Flipkart" to search in search box...............................passed
+And Click on I am feeling lucky button......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
